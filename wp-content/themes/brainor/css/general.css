@@ -1,0 +1,46 @@
+body {
+    background: url(../imgs/bg-general.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+header .header-container {
+    padding-top: 40px;
+}
+
+header .header-container,
+header .header-container a {
+    color: white;
+}
+
+header .header-container .header-top .header-middle {
+    text-align: center;
+}
+
+header .header-container .header-top .header-middle button {
+    color: white;
+}
+
+header .header-container .header-top .header-middle button:after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f078";
+    border: 0px !important;
+    font-weight: 900;
+    vertical-align: baseline;
+}
+
+header .header-container .header-top .header-last {
+    text-align: right;
+}
+
+header .header-container .header-bottom button {
+    color: white;
+}
+
+header .header-container .header-bottom button:after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f078";
+    border: 0px !important;
+    font-weight: 900;
+    vertical-align: baseline;
+}

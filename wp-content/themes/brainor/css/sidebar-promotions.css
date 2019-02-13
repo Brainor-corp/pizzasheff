@@ -1,0 +1,63 @@
+.promotions-block {
+
+}
+
+.promotions-block .products-fly {
+    background-image: url('../imgs/pizza.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    height: 250px;
+    margin-bottom: -30px;
+}
+
+.promotions-block .products-fly img {
+    position: absolute;
+    z-index: -1;
+}
+
+.promotions-block .products-fly .container {
+    position: relative;
+}
+
+.promotions-block .products-fly img:nth-child(1) {
+    width: 340px;
+    left: -200px;
+}
+
+.promotions-block .products-fly img:nth-child(2) {
+    width: 340px;
+    right: -200px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.promotions-block .products-fly img:nth-child(3) {
+    width: 160px;
+    left: 160px;
+    top: 10px;
+}
+
+.promotions-block .products-fly img:nth-child(4) {
+    width: 100px;
+    left: 160px;
+    top: 90px;
+}
+
+.promotions-block .products-fly img:nth-child(5) {
+    width: 100px;
+    right: 100px;
+    top: -20px;
+    transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    -moz-transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+    -o-transform: rotate(55deg);
+}
+
+.promotions-block .curved-container {
+    background-image: url('../imgs/curve-bg.png');
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
