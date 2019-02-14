@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'venecia'; /*a name to be used later*/
+    src: url('../fonts/Venecia2.ttf'); /*URL to font*/
+}
+
 body {
     background: url(../imgs/bg-general.png);
     background-repeat: repeat-y;
@@ -43,4 +48,20 @@ header .header-container .header-bottom button:after {
     border: 0px !important;
     font-weight: 900;
     vertical-align: baseline;
+}
+
+.bg-orange {
+    background-color: #f8a51f !important;
+}
+
+.text-orange {
+    color: #f8a51f !important;
+}
+
+.border-orange {
+    border: 2px solid #f8a51f !important;
+}
+
+.btn-rounded {
+    border-radius: 20px !important;
 }

@@ -99,6 +99,7 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
 	    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.2.1.slim.min.js','','',true); // добавляем свой
 	    wp_enqueue_script('popper','//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js','','',true); // добавляем свой
 	    wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap/bootstrap.min.js','','',true); // бутстрап
+	    wp_enqueue_script('owl', get_template_directory_uri().'/addons/OwlCarousel/dist/owl.carousel.min.js','','',true); // owl
 	    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	}
 }
@@ -109,6 +110,8 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap/bootstrap.min.css' ); // бутстрап
 	    wp_enqueue_style( 'fa', get_template_directory_uri().'/addons/fa/css/all.css' ); // fa
+	    wp_enqueue_style( 'owl', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.carousel.min.css' ); // owl
+	    wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.theme.default.min.css' ); // owl
 		wp_enqueue_style( 'main', get_template_directory_uri().'/css/general.css' ); // основные стили шаблона
 	}
 }
