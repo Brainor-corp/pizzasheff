@@ -8,18 +8,23 @@ get_header(); // подключаем header.php ?>
 
 <!-- Блок с акциями -->
 <section>
-	<?php get_sidebar('promotions') ?>
+    <?php get_template_part('partials/common/part', 'promotions') ?>
 </section>
 
 <!-- Блок с товарами -->
 <section>
-    <h3 class="text-center text-white my-5">Популярные товары</h3>
-    <?php get_sidebar('products') ?>
+    <h3 class="text-center text-white font-weight-light my-5">Популярные товары</h3>
+    <?php get_template_part('partials/common/part', 'products') ?>
 </section>
 
 <!-- Блок с плюсами завидения -->
 <section>
-    <?php get_sidebar('pluses') ?>
+    <?php get_template_part('partials/common/part', 'pluses') ?>
+</section>
+
+<!-- Блок с формой подписки -->
+<section>
+    <?php get_template_part('partials/common/part', 'subscribe') ?>
 </section>
 
 <?php get_footer(); // подключаем footer.php ?>

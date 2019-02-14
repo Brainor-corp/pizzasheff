@@ -35,10 +35,20 @@
     transform: scaleX(-1);
 }
 
+@keyframes up-down {
+    0% {
+        top: 20px
+    }
+    50% {
+        top: 40px
+    }
+}
+
 .promotions-block .products-fly img:nth-child(3) {
     width: 160px;
     left: 160px;
     top: 10px;
+    animation: up-down 5s ease-in-out infinite alternate;
 }
 
 .promotions-block .products-fly img:nth-child(4) {
@@ -75,6 +85,8 @@
     right: 130px;
     top: 100px;
 }
+
+/* ======================== */
 
 .promotions-block .curved-container {
     background-image: url('../imgs/curve-bg.png');

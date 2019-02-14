@@ -64,13 +64,13 @@
                                             <span class="product-field-label">Кол-во:</span>
                                         </div>
                                         <div class="col">
-                                            <div class="input-group">
+                                            <div class="input-group product-counter-group">
                                                 <input type="number" class="form-control border-orange" value="1" min="1" step="1">
                                                 <div class="d-inline-block pl-1">
-                                                    <button class="btn bg-orange px-1 py-0 text-white d-block" type="button">
+                                                    <button class="btn bg-orange px-1 py-0 text-white d-block product-count-up" type="button">
                                                         <i class="fas fa-caret-up"></i>
                                                     </button>
-                                                    <button class="btn bg-orange px-1 py-0 text-white d-block mt-1" type="button">
+                                                    <button class="btn bg-orange px-1 py-0 text-white d-block mt-1 product-count-down" type="button">
                                                         <i class="fas fa-caret-down"></i>
                                                     </button>
                                                 </div>

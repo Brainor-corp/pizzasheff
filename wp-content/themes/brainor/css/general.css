@@ -65,3 +65,7 @@ header .header-container .header-bottom button:after {
 .btn-rounded {
     border-radius: 20px !important;
 }
+
+footer img.logo-orange {
+    max-width: 100px;
+}
