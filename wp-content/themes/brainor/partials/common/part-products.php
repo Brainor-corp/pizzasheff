@@ -11,8 +11,8 @@
 
 <div class="container products-container">
     <div class="row">
-        <?php for($i = 0; $i < 8; $i++): ?>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 product-block">
+        <?php for($i = 0; $i < 9; $i++): ?>
+            <div class="col-md-4 col-sm-6 col-12 mb-4 product-block">
                 <div class="product-wrapper bg-white p-2">
                     <div class="row">
                         <div class="col-12">
