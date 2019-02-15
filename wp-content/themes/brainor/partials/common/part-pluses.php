@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="row justify-content-around align-items-center mb-5">
-            <div class="col-auto">
+            <div class="col-auto mb-md-0 mb-4">
                 <div class="text-center mb-4">
                     <img src="/wp-content/themes/brainor/imgs/pizza-icon.png" class="img-fluid" alt="">
                 </div>
@@ -30,7 +30,7 @@
                     </span>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class="col-auto mb-md-0 mb-4">
                 <div class="text-center mb-4">
                     <img src="/wp-content/themes/brainor/imgs/items.png" class="img-fluid" alt="">
                 </div>

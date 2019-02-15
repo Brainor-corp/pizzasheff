@@ -7,8 +7,6 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center 50px;
-    height: 280px;
-    margin-bottom: -60px;
     overflow: hidden;
 }
 
@@ -205,12 +203,9 @@
 /* ======================== */
 
 .promotions-block .curved-container {
-    background-image: url('../imgs/curve-bg.png');
     background-position: center bottom;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 .promotions-block .curved-container img.figure {
@@ -225,12 +220,46 @@
 }
 
 .promotions-block .curved-container p.promotion-header {
-    font-size: 4rem;
     color: #2b2f3e;
-    line-height: 4rem;
 }
 
 .promotions-block .curved-container p.promotion-description {
     color: #bbbbbb;
     font-weight: bold;
+}
+
+@media(max-width: 991px) {
+    .promotions-block .curved-container {
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .promotions-block .curved-container p.promotion-header {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .promotions-block .products-fly {
+        height: unset;
+        margin-bottom: unset;
+    }
+}
+
+@media(min-width: 992px) {
+    .promotions-block .curved-container {
+        background-image: url('../imgs/curve-bg.png');
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    .promotions-block .curved-container p.promotion-header {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .promotions-block .products-fly {
+        height: 280px;
+        margin-bottom: -60px;
+    }
 }

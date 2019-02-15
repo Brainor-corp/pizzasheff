@@ -34,7 +34,9 @@
                 <div class="col-md header-first">
                     <div class="row mb-3">
                         <div class="col">
-                            <strong>ПиццаШеff - территория вкусной пиццы</strong>
+                            <a href="/">
+                                <strong>ПиццаШеff - территория вкусной пиццы</strong>
+                            </a>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -56,7 +58,9 @@
                 <div class="col-md header-middle pt-5">
                     <div class="row">
                         <div class="col-12">
-                            <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
+                            <a href="/">
+                                <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -77,10 +81,10 @@
                     </div>
                     <div class="row justify-content-end">
                         <div class="col-auto">
-                            <a href="">
+                            <a href="<?php echo wc_get_cart_url() ?>">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <span class="cart-info">(12 на 1790 р.)</span>
+                                        <span class="cart-info">(<?php echo WC()->cart->get_cart_contents_count() . ' на ' . WC()->cart->get_cart_total() ?>)</span>
                                     </div>
                                     <div class="col-auto pl-md-0">
                                         <img class="img-fluid" src="/wp-content/themes/brainor/imgs/cart.png" alt="">

@@ -9,7 +9,7 @@
 		<div class="container-fluid bg-white py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-3 col-12 text-md-left text-center">
                         <h5 class="footer-label mb-5">
                             Информация
                         </h5>
@@ -21,7 +21,7 @@
                             <?php endfor ?>
                         </ul>
                     </div>
-                    <div class="col-md-3 col-12">
+                    <div class="col-md-3 col-12 text-md-left text-center">
                         <h5 class="footer-label mb-5">
                             Продукты
                         </h5>
@@ -33,7 +33,7 @@
                             <?php endfor ?>
                         </ul>
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-6 col-12 text-md-left text-center">
                         <h5 class="footer-label mb-5">
                             Зона охвата
                         </h5>
@@ -49,13 +49,13 @@
                     </div>
                 </div>
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-auto col-12">
+                    <div class="col-md-auto col-12 text-md-left text-center">
                         <span class="text-orange">© <?php echo date("Y"); ?> - PizzaShef</span>
                     </div>
-                    <div class="col-md-auto col-12">
+                    <div class="col-md-auto col-12 my-md-0 my-2 text-md-left text-center">
                         <img src="/wp-content/themes/brainor/imgs/logo-orange.png" class="img-fluid logo-orange" alt="">
                     </div>
-                    <div class="col-md-auto col-12">
+                    <div class="col-md-auto col-12 text-md-left text-center">
                         <a href="tel:84953694879" class="text-orange mr-2">8 (495) 369 48 79</a>
                         <a href="">
                             <img src="/wp-content/themes/brainor/imgs/ins-orange.png" alt="" class="img-fluid">

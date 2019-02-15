@@ -2,50 +2,16 @@ jQuery(document).ready(function($) {
     $(".owl-carousel-promotions").owlCarousel({
         loop:true,
         items:1,
-        dots: false
+        dots: false,
+        autoplay:true,
+        autoplayHoverPause:true
     });
 
-    function inputChangeCount(direct) {
-        let button = $(this);
-        let input = button.closest('.product-counter-group').find('input');
-        console.log(direct);
+    $( ".product-count" ).styler();
 
-        if(direct === 'down') {
-            input.val(parseInt(input.val()) > 1 ? parseInt(input.val()) - 1 : 1);
-        } else {
-            input.val(parseInt(input.val()) + 1);
-        }
-    }
-
-    var timeoutId = 0;
-
-    $(document).on('mousedown', '.product-count-down', function() {
-        timeoutId = setTimeout(inputChangeCount('down'), 700);
-    }).on('mouseup mouseleave', function() {
-        clearTimeout(timeoutId);
+    $(document).on('change', "input[name='attribute_pa_size']", function () {
+        let input = $(this);
+        input.closest('.product-block').find('.product-price').html(input.data('price') + ' р.');
     });
 
-    $(document).on('mousedown', '.product-count-up', function() {
-        timeoutId = setTimeout(inputChangeCount('up'), 700);
-    }).on('mouseup mouseleave', function() {
-        clearTimeout(timeoutId);
-    });
-
-    $(document).on('click', '.product-count-down', function () {
-        inputChangeCount('down');
-
-        // let button = $(this);
-
-        // let input = button.closest('.product-counter-group').find('input');
-        // input.val(parseInt(input.val()) > 1 ? parseInt(input.val()) - 1 : 1);
-    });
-
-    $(document).on('click', '.product-count-up', function () {
-        inputChangeCount('up');
-        //
-        // let button = $(this);
-        // let input = button.closest('.product-counter-group').find('input');
-        //
-        // input.val(parseInt(input.val()) + 1);
-    });
 });

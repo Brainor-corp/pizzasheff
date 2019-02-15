@@ -97,8 +97,10 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_deregister_script('jquery'); // выключаем стандартный jquery
 	    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.2.1.slim.min.js','','',true); // добавляем свой
-	    wp_enqueue_script('popper','//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js','','',true); // добавляем свой
+//	    wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/addons/jquery-ui/jquery-ui.min.js','','',true); // jq-ui
+	    wp_enqueue_script('popper','//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js','','',true); // popper
 	    wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap/bootstrap.min.js','','',true); // бутстрап
+	    wp_enqueue_script('formstyle', get_template_directory_uri().'/addons/jQueryFormStyler/jquery.formstyler.min.js','','',true); // formstyle
 	    wp_enqueue_script('owl', get_template_directory_uri().'/addons/OwlCarousel/dist/owl.carousel.min.js','','',true); // owl
 	    wp_enqueue_script('ymap', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat','','',false); // ymap
 	    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
@@ -110,6 +112,9 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	function add_styles() { // добавление стилей
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap/bootstrap.min.css' ); // бутстрап
+	    wp_enqueue_style( 'formstyle', get_template_directory_uri().'/addons/jQueryFormStyler/jquery.formstyler.css' ); // formstyle
+//	    wp_enqueue_style( 'jq-ui', get_template_directory_uri().'/addons/jquery-ui/jquery-ui.min.css' ); // jq-ui
+//	    wp_enqueue_style( 'jq-ui-str', get_template_directory_uri().'/addons/jquery-ui/jquery-ui.structure.min.css' ); // jq-ui
 	    wp_enqueue_style( 'fa', get_template_directory_uri().'/addons/fa/css/all.css' ); // fa
 	    wp_enqueue_style( 'owl', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.carousel.min.css' ); // owl
 	    wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.theme.default.min.css' ); // owl

@@ -23,11 +23,11 @@
     <div class="row justify-content-center">
         <div class="col-auto">
             <form class="form-inline">
-                <div class="form-group">
+                <div class="form-group text-md-left text-center">
                     <label for="staticEmail2" class="sr-only">Email</label>
                     <input type="email" class="form-control btn-rounded mr-2 py-2 px-4" name="email" placeholder="email@example.com" required>
+                    <button type="submit" class="btn btn-rounded bg-orange text-white py-2 px-4 mt-md-0 mt-3">Подписаться</button>
                 </div>
-                <button type="submit" class="btn btn-rounded bg-orange text-white py-2 px-4">Подписаться</button>
             </form>
         </div>
     </div>
