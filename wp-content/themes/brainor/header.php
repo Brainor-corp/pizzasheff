@@ -27,7 +27,15 @@
 	
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
-<body <?php body_class(); // все классы для body ?>>
+<?php
+add_filter('body_class','my_classes_names');
+function my_classes_names( $classes ) {
+    // добавим класс 'class-name' в массив классов $classes
+        $classes[] = 'lazyload';
+    return $classes;
+}
+?>
+<body <?php body_class(); // все классы для body ?>  data-bg="/wp-content/themes/brainor/imgs/bg-general.jpg">
 	<header>
 		<div class="container header-container">
             <div class="row header-top">
