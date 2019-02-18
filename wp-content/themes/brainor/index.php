@@ -14,7 +14,11 @@ get_header(); // подключаем header.php ?>
 <!-- Блок с товарами -->
 <section>
     <h3 class="text-center text-white font-weight-light my-5">Популярные товары</h3>
-    <?php get_template_part('partials/common/part', 'products') ?>
+    <?php
+        $products = wc_get_products( [] );
+        hm_get_template_part( 'partials/common/part-products', [ 'products' => $products ] );
+    ?>
+
 </section>
 
 <!-- Блок с плюсами завидения -->

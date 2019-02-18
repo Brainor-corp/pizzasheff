@@ -3,7 +3,7 @@
  * Запись в цикле (loop.php)
  * @package WordPress
  * @subpackage brainor
- */ 
+ */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
 	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> <?php // заголовок поста и ссылка на его полное отображение (single.php) ?>
