@@ -7,6 +7,7 @@ body {
     background: url(../imgs/bg-general.jpg);
     background-repeat: repeat-y;
     background-size: 100% auto;
+    overflow-x: hidden !important;
 }
 
 header .header-container {
@@ -14,8 +15,13 @@ header .header-container {
 }
 
 header .header-container,
-header .header-container a {
+header a,
+header button {
     color: white;
+}
+
+header a:hover {
+    color: white !important;
 }
 
 header .header-container .header-top .header-middle {
@@ -54,6 +60,12 @@ header .header-container .header-bottom button:after {
     background-color: #f8a51f !important;
 }
 
+button.bg-orange:hover,
+.jq-number__spin:hover,
+a.bg-orange:hover {
+    background-color: #e99b1d !important;
+}
+
 .text-orange {
     color: #f8a51f !important;
 }
@@ -68,4 +80,16 @@ header .header-container .header-bottom button:after {
 
 footer img.logo-orange {
     max-width: 100px;
+}
+
+.canvas-menu {
+    z-index: 999;
+}
+
+header ul.list-inline li {
+    display: inline-block;
+}
+
+footer a {
+    color: #f8a51f !important;
 }

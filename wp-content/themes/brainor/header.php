@@ -24,7 +24,7 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
+
 	<?php wp_head(); // необходимо для работы плагинов и функционала ?>
 </head>
 <?php
@@ -37,10 +37,44 @@ function my_classes_names( $classes ) {
 ?>
 <body <?php body_class(); // все классы для body ?>>
 	<header>
-		<div class="container header-container">
-            <div class="row header-top">
-                <div class="col-md header-first">
-                    <div class="row mb-3">
+
+        <!--    Мобильное меню начало   -->
+        <nav canvas="mobile" class="offcanvas fixed-top bg-orange canvas-menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <a href="/" class="w-100 text-light m-0 pt-2">
+                            <strong>ПиццаШеff</strong>
+                        </a>
+                    </div>
+                    <div class="col text-right">
+                        <button class="navbar-toggler navbar-toggle-offcanvas-right p-0 text-right">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div off-canvas="offcanvas-right right reveal h-100" class="container canvas-menu bg-orange">
+            <div class="fixed-top text-center p-3">
+                <a href="/">
+                    <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
+                </a>
+            </div>
+            <div class="fixed-bottom text-center p-3">
+                <ul class="pl-0 list-unstyled text-white">
+                    <?php get_template_part('partials/header/part', 'pages-links') ?>
+                </ul>
+            </div>
+        </div>
+        <!--    Мобильное меню конец    -->
+
+        <!--    Настольное меню начало    -->
+        <div class="container header-container">
+            <div class="row justify-content-between mt-md-0 mt-3 header-top">
+                <div class="col-md col-auto header-first">
+                    <div class="row mb-3 d-md-block d-none">
                         <div class="col">
                             <a href="/">
                                 <strong>ПиццаШеff - территория вкусной пиццы</strong>
@@ -63,7 +97,7 @@ function my_classes_names( $classes ) {
                         </div>
                     </div>
                 </div>
-                <div class="col-md header-middle pt-5">
+                <div class="col-md header-middle pt-5 d-md-block d-none">
                     <div class="row">
                         <div class="col-12">
                             <a href="/">
@@ -72,17 +106,15 @@ function my_classes_names( $classes ) {
                         </div>
                     </div>
                 </div>
-                <div class="col-md header-last">
-                    <div class="row">
+                <div class="col-md col-auto header-last">
+                    <div class="row d-md-block d-none">
                         <div class="col mb-3">
                             <ul class="list-inline mb-0">
-                                <li class="list-inline-item mr-0 ml-3"><a href="#">О нас</a></li>
-                                <li class="list-inline-item mr-0 ml-3"><a href="#">Акции</a></li>
-                                <li class="list-inline-item mr-0 ml-3"><a href="#">Контакты</li>
+                                <?php get_template_part('partials/header/part', 'pages-links') ?>
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row d-md-block d-none">
                         <div class="col mb-3">
                             <a href="">Конструктор пиццы</a>
                         </div>
@@ -91,7 +123,7 @@ function my_classes_names( $classes ) {
                         <div class="col-auto">
                             <a href="<?php echo wc_get_cart_url() ?>">
                                 <div class="row align-items-center">
-                                    <div class="col">
+                                    <div class="col d-md-block d-none">
                                         <span class="cart-info">(<?php echo WC()->cart->get_cart_contents_count() . ' на ' . WC()->cart->get_cart_total() ?>)</span>
                                     </div>
                                     <div class="col-auto pl-md-0">
@@ -107,21 +139,12 @@ function my_classes_names( $classes ) {
                 <div class="col-12 text-center">
                     <div class="btn-group">
                         <ul class="list-inline mb-0">
-                            <?php for ($i = 0; $i < 4; $i++): ?>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn bg-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item text-dark" href="#">Action</a>
-                                        <a class="dropdown-item text-dark" href="#">Another action</a>
-                                        <a class="dropdown-item text-dark" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                            <?php endfor ?>
+                            <?php get_template_part('partials/header/part', 'products-categories') ?>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <!--    Настольное меню конец    -->
+
 	</header>

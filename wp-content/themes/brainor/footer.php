@@ -26,11 +26,7 @@
                             Продукты
                         </h5>
                         <ul class="pl-0 list-unstyled">
-                            <?php for($i = 0; $i < 4; $i++): ?>
-                                <li class="mb-2">
-                                    <a href="" class="text-orange">Ссылка</a>
-                                </li>
-                            <?php endfor ?>
+                            <?php get_template_part('partials/header/part', 'products-categories') ?>
                         </ul>
                     </div>
                     <div class="col-md-6 col-12 text-md-left text-center">
