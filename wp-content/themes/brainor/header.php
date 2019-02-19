@@ -58,14 +58,14 @@ function my_classes_names( $classes ) {
 
         <div off-canvas="offcanvas-right right reveal h-100" class="container canvas-menu bg-orange">
             <div class="fixed-top text-center p-3">
-                <a href="/">
-                    <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
-                </a>
-            </div>
-            <div class="fixed-bottom text-center p-3">
                 <ul class="pl-0 list-unstyled text-white">
                     <?php get_template_part('partials/header/part', 'pages-links') ?>
                 </ul>
+            </div>
+            <div class="fixed-bottom text-center p-3">
+                <a href="/">
+                    <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
+                </a>
             </div>
         </div>
         <!--    Мобильное меню конец    -->

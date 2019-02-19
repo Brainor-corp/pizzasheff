@@ -263,3 +263,25 @@
         margin-bottom: -60px;
     }
 }
+
+.promotions-block .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100% !important;
+}
+
+.promotions-block .owl-nav button {
+    position: absolute;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 1px solid #2b2f3e !important;
+}
+
+.promotions-block .owl-nav button.owl-prev {
+    left: -20px;
+}
+
+.promotions-block .owl-nav button.owl-next {
+    right: -20px;
+}

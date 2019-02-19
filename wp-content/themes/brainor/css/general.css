@@ -93,3 +93,8 @@ header ul.list-inline li {
 footer a {
     color: #f8a51f !important;
 }
+
+*:focus {
+    outline:none !important;
+    box-shadow: none !important;
+}

@@ -4,7 +4,9 @@ jQuery(document).ready(function($) {
         items:1,
         dots: false,
         autoplay:true,
-        autoplayHoverPause:true
+        autoplayHoverPause:true,
+        nav:true,
+        navText : ['<i class="fas fa-arrow-left"></i>','<i class="fas fa-arrow-right"></i>']
     });
 
     $( ".product-count" ).styler();

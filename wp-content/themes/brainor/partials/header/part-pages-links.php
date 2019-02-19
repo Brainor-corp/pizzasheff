@@ -8,5 +8,5 @@
 ?>
 
 <li class="mr-0 ml-3"><a href="#">О нас</a></li>
-<li class="mr-0 ml-3"><a href="#">Акции</a></li>
+<li class="mr-0 ml-3"><a href="/category/promotions/">Акции</a></li>
 <li class="mr-0 ml-3"><a href="#">Контакты</a></li>

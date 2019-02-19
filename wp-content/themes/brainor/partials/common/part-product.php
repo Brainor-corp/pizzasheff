@@ -25,8 +25,8 @@
                                 <input type="hidden" name="add-to-cart" value="<?php echo $product->get_id() ?>">
                                 <div class="row mb-3">
                                     <div class="col-12 pt-3">
-                                        <h4 class="text-orange">
-                                            <?php echo $product->get_name() ?>
+                                        <h4>
+                                            <a class="text-orange" href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_name() ?></a>
                                         </h4>
                                     </div>
                                 </div>
