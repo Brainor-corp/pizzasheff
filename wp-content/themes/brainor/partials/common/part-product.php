@@ -96,10 +96,10 @@
                                         <strong class="product-field-label">Цена:</strong>
                                     </div>
                                     <div class="col">
-                                                    <span class="product-field-value product-price">
-                                                        <?php echo $product->get_price() ?>
-                                                        р.
-                                                    </span>
+                                        <span class="product-field-value product-price">
+                                            <?php echo $product->get_price() ?>
+                                            р.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                     <div class="px-2">
                         <div class="row mb-3">
                             <div class="col-12">
-                                <button class="btn bg-orange text-uppercase w-100" type="submit">
+                                <button class="btn bg-orange text-uppercase w-100 text-white" type="submit">
                                     заказать
                                 </button>
                             </div>

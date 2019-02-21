@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
 }
 
-.product-block .product-wrapper .product-count-row input[type="radio"] {
+.product-count-row input[type="radio"] {
     height: 0;
     width: 0;
     opacity: 0;
@@ -18,7 +18,7 @@
     position: absolute;
 }
 
-.product-block .product-wrapper .product-count-row input[type="radio"] ~ label {
+.product-count-row input[type="radio"] ~ label {
     font-weight: bold;
     font-size: 24px;
     position: relative;
@@ -32,13 +32,13 @@
     cursor: pointer;
 }
 
-.product-block .product-wrapper .product-count-row input[type="radio"]:checked ~ label {
+.product-count-row input[type="radio"]:checked ~ label {
     border: 2px solid #f8a51f;
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
-.product-block .product-wrapper .product-count-row input[type="radio"] ~ label:before {
+.product-count-row input[type="radio"] ~ label:before {
     content: "";
     background: url('../imgs/arrow-bottom.png') no-repeat;
     width: 23px;
@@ -52,28 +52,28 @@
     left: 50%;
 }
 
-.product-block .product-wrapper .product-count-row input[type="radio"]:checked ~ label:before {
+.product-count-row input[type="radio"]:checked ~ label:before {
     background: url('../imgs/arrow-bottom-active.png') no-repeat;
 }
 
-.product-block .product-wrapper .product-count-row input {
+.product-count-row input {
     height: 42px;
 }
 
-.product-block .product-wrapper .product-count-row input::-webkit-outer-spin-button,
-.product-block .product-wrapper .product-count-row input::-webkit-inner-spin-button {
+.product-count-row input::-webkit-outer-spin-button,
+.product-count-row input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__field {
+.product-count-row .jq-number__field {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
 }
 
-.product-block .product-wrapper .product-count-row input[type=number] {
+.product-count-row input[type=number] {
     -moz-appearance:textfield; /* Firefox */
     border: 2px solid #f8a51f;
     -webkit-box-shadow: none;
@@ -85,7 +85,7 @@
     font-size: 16px;
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__spin {
+.product-count-row .jq-number__spin {
     background: #f8a51f;
     border: none;
     -webkit-box-shadow: none;
@@ -93,14 +93,14 @@
     height: 19px;
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__spin:after {
+.product-count-row .jq-number__spin:after {
     top: 7px;
     border-right: 5px solid transparent;
     border-bottom: 5px solid #fff;
     border-left: 5px solid transparent;
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__spin:after {
+.product-count-row .jq-number__spin:after {
     content: '';
     position: absolute;
     top: 4px;
@@ -112,7 +112,7 @@
     border-left: 5px solid transparent;
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__spin.minus:after {
+.product-count-row .jq-number__spin.minus:after {
     top: 8px;
     border-top: 5px solid #fff;
     border-right: 5px solid transparent;
@@ -120,7 +120,7 @@
     border-left: 5px solid transparent;
 }
 
-.product-block .product-wrapper .product-count-row .jq-number__spin:after {
+.product-count-row .jq-number__spin:after {
     top: 7px;
     border-right: 5px solid transparent;
     border-bottom: 5px solid #fff;

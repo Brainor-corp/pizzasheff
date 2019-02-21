@@ -15,7 +15,7 @@
 			</div>
 		<?php } ?>
 		<div class="col-sm-9 col-12">
-            <h2><a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> <?php // заголовок поста и ссылка на его полное отображение (single.php) ?>
+            <h2><a class="text-orange" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> <?php // заголовок поста и ссылка на его полное отображение (single.php) ?>
             <?php the_content(''); // пост превью, до more ?>
 		</div>
 	</div>

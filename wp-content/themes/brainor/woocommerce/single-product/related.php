@@ -21,25 +21,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
+	<section class="related products row clear">
 
-	<section class="related products">
+		<div class="col-12 px-md-0">
+            <hr>
+            <h2 class="text-white"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+            <?php woocommerce_product_loop_start(); ?>
 
-		<?php woocommerce_product_loop_start(); ?>
+            <?php foreach ( $related_products as $related_product ) : ?>
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+                <?php
+                $post_object = get_post( $related_product->get_id() );
 
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+                setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object );
+                wc_get_template_part( 'content', 'product' ); ?>
 
-					wc_get_template_part( 'content', 'product' ); ?>
+            <?php endforeach; ?>
 
-			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
+            <?php woocommerce_product_loop_end(); ?>
+        </div>
 
 	</section>
 

@@ -30,19 +30,25 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs" role="tablist">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
-				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
-			</div>
-		<?php endforeach; ?>
-	</div>
+    <div class="row bg-white">
+        <div class="col-12">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <?php $isFirstTabLink = true ?>
+                <?php foreach ( $tabs as $key => $tab ) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if($isFirstTabLink) {$isFirstTabLink = false; echo 'active';} ?>" id="product-tab-<?php echo esc_attr( $key ); ?>-link" data-toggle="tab" href="#product-tab-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="product-tab-<?php echo esc_attr( $key ); ?>" aria-selected="false"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <div class="tab-content py-2" id="myTabContent">
+                <?php $isFirstTab = true ?>
+                <?php foreach ( $tabs as $key => $tab ) : ?>
+                    <div class="tab-pane fade <?php if($isFirstTab) {$isFirstTab = false; echo 'active show';} ?>" id="product-tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="product-tab-<?php echo esc_attr( $key ); ?>">
+                        <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
 
 <?php endif; ?>
