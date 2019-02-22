@@ -32,12 +32,12 @@ get_header(); // подключаем header.php ?>
                             ?>
                             <hr>
                         </div>
-                        <?php if(!$isProduct): ?>
+                        <?php if(!$isProduct && !empty(get_the_post_thumbnail_url())): ?>
                             <div class="col-md-4 col-12">
                                 <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="img-fluid w-100">
                             </div>
                         <?php endif; ?>
-                        <div class="<?php echo $isProduct ? 'col-12 product-block' : 'col' ?>">
+                        <div class="col">
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
                                 <h1 class="text-orange"><?php the_title(); // заголовок поста ?></h1>
                                 <?php the_content(); // контент ?>

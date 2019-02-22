@@ -210,7 +210,7 @@
 	border-top-color: #000;
 }
 .jq-number__spin.plus:hover:after {
-	border-bottom-color: #000;
+	border-bottom-color: white;
 }
 .jq-number.focused .jq-number__field {
 	/*border: 1px solid #5794BF;*/

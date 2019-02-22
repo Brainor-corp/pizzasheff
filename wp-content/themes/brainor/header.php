@@ -11,6 +11,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="ajax-url" content="<?php echo admin_url('admin-ajax.php'); ?>">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<?php /* RSS и всякое */ ?>

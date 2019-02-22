@@ -60,6 +60,10 @@ header .header-container .header-bottom button:after {
     background-color: #f8a51f !important;
 }
 
+.bg-black-transparent {
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
 button.bg-orange:hover,
 .jq-number__spin:hover,
 a.bg-orange:hover {
@@ -97,4 +101,23 @@ footer a {
 *:focus {
     outline:none !important;
     box-shadow: none !important;
+}
+
+.preload {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+}
+
+.deliveryModalHeader {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    vertical-align: middle;
+    margin-left: 10px;
 }

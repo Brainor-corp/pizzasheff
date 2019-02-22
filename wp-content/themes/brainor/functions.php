@@ -215,4 +215,14 @@ function hm_get_template_part( $file, $template_args = array(), $cache_args = ar
     echo $data;
 }
 
+/**
+ * Обновление блока корзины
+ */
+function get_cart_update(){
+    echo '(' . WC()->cart->get_cart_contents_count() . ' на ' . WC()->cart->get_cart_total() . ')';
+    wp_die();
+}
+add_action( 'wp_ajax_get_cart_update', 'get_cart_update' );
+add_action( 'wp_ajax_nopriv_get_cart_update', 'get_cart_update' );
+
 ?>

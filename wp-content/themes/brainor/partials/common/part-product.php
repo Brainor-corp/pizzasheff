@@ -12,7 +12,7 @@
 ?>
 
 <div class="col-lg-4 col-sm-6 col-12 mb-4 product-block">
-    <form action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', '/' ) ); ?>" class="h-100">
+    <form action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', '/' ) ); ?>" class="h-100 to-cart-form">
         <div class="product-wrapper h-100 bg-white p-2">
             <div class="row h-100">
                 <div class="col-12">

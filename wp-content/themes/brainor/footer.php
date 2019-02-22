@@ -14,11 +14,21 @@
                             Информация
                         </h5>
                         <ul class="pl-0 list-unstyled">
-                            <?php for($i = 0; $i < 6; $i++): ?>
+                            <?php query_posts('tag=show_in_footer'); ?>
+                            <?php if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
                                 <li class="mb-2">
-                                    <a href="" class="text-orange">Ссылка</a>
+                                    <a href="<?php echo get_the_permalink() ?>" class="text-orange"><?php echo get_the_title() ?></a>
                                 </li>
-                            <?php endfor ?>
+                            <?php endwhile; endif; ?>
+                            <li class="mb-2">
+                                <a href="#" class="text-orange" data-toggle="modal" data-target="#contactModal">Обратная связь</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-orange" data-toggle="modal" data-target="#deliveryModal">Доставка</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-orange" data-toggle="modal" data-target="#liveModal">Live</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-12 text-md-left text-center">
@@ -61,6 +71,10 @@
             </div>
         </div>
 	</footer>
+    <?php get_template_part('partials/modals/part', 'contact-form') ?>
+    <?php get_template_part('partials/modals/part', 'delivery') ?>
+    <?php get_template_part('partials/modals/part', 'live') ?>
+    <div class="preload"></div>
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 </body>
 </html>
