@@ -18,19 +18,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="iv-embed">
-                    <div class="iv-v" style="display:block;margin:0;padding:1px;border:0;background:#000;">
-                        <iframe class="iv-i" style="display:block;margin:0;padding:0;border:0;margin: 0 auto;max-width:100%" src="https://open.ivideon.com/embed/v2/?server=100-OGbLpkoqrPhFL2KZhU9SVT&amp;camera=0&amp;width=840&amp;height=500&amp;lang=ru" width="840" height="500" frameborder="0" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="iv-b" style="display:block;margin:0;padding:0;border:0;">
-                        <div style="float:right;text-align:right;padding:0 0 10px;line-height:10px;">
-                            <a class="iv-a" style="font:10px Verdana,sans-serif;color:inherit;opacity:.6;" href="https://www.ivideon.com/" target="_blank">Powered by Ivideon</a>
-                        </div>
-                        <div style="clear:both;height:0;overflow:hidden;"> </div>
-                        <script src="https://open.ivideon.com/embed/v2/embedded.js"></script>
-                    </div>
-                </div>
+                <?php echo get_option('live'); ?>
             </div>
         </div>
     </div>

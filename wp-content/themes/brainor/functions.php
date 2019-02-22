@@ -227,4 +227,48 @@ function get_cart_update(){
 add_action( 'wp_ajax_get_cart_update', 'get_cart_update' );
 add_action( 'wp_ajax_nopriv_get_cart_update', 'get_cart_update' );
 
+add_action('admin_menu', 'add_gcf_interface');
+
+function add_gcf_interface() {
+    add_options_page('Настройка полей', 'Настройка полей', '8', 'functions', 'editglobalcustomfields');
+}
+
+function editglobalcustomfields() {
+    ?>
+	<div class='wrap'>
+		<h2>Настройки полей</h2>
+		<form method="post" action="options.php">
+            <?php wp_nonce_field('update-options') ?>
+
+			<p>
+				<strong>Телефон:</strong><br/>
+				<input type="text" name="phone" size="45" value="<?php echo get_option('phone'); ?>" />
+			</p>
+
+			<p>
+				<strong>Instagram:</strong><br/>
+				<input type="text" name="instagram" size="45" value="<?php echo get_option('instagram'); ?>" />
+			</p>
+
+			<p>
+				<strong>Карта:</strong><br/>
+				<textarea name="map" cols="50" rows="10"><?php echo get_option('map'); ?></textarea>
+			</p>
+
+			<p>
+				<strong>Трансляция:</strong><br/>
+				<textarea name="live" cols="50" rows="10"><?php echo get_option('live'); ?></textarea>
+			</p>
+
+			<p><input type="submit" name="Submit" value="Сохранить" /></p>
+
+			<input type="hidden" name="action" value="update" />
+			<input type="hidden" name="page_options" value="phone,instagram,map,live" />
+
+		</form>
+	</div>
+    <?php
+}
+
+
 ?>

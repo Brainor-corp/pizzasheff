@@ -44,7 +44,7 @@
                             Зона охвата
                         </h5>
                         <div>
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa6352315fb5d5419f1dd9e7382f9a2179be82c5c7c2f62356cebc50a82869c70&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                            <?php echo get_option('map'); ?>
                         </div>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
                         <img src="/wp-content/themes/brainor/imgs/logo-orange.png" class="img-fluid logo-orange" alt="">
                     </div>
                     <div class="col-md-auto col-12 text-md-left text-center">
-                        <a href="tel:84953694879" class="text-orange mr-2">8 (495) 369 48 79</a>
-                        <a href="">
+                        <a href="tel:<?php echo get_option('phone'); ?>" class="text-orange mr-2"><?php echo get_option('phone'); ?></a>
+                        <a href="<?php echo get_option('instagram'); ?>">
                             <img src="/wp-content/themes/brainor/imgs/ins-orange.png" alt="" class="img-fluid">
                         </a>
                     </div>

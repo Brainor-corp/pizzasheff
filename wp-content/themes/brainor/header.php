@@ -89,12 +89,12 @@ function my_classes_names( $classes ) {
                     </div>
                     <div class="row align-items-center">
                         <div class="col-auto pr-md-0">
-                            <a href="">
+                            <a href="<?php echo get_option('instagram'); ?>">
                                 <img class="img-fluid" src="/wp-content/themes/brainor/imgs/inst.png" alt="">
                             </a>
                         </div>
                         <div class="col">
-                            <a href="tel:+74953694879">+7(495)369-48-79</a>
+                            <a href="tel:<?php echo get_option('phone'); ?>"><?php echo get_option('phone'); ?></a>
                         </div>
                     </div>
                 </div>
