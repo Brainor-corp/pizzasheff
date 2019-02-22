@@ -96,8 +96,16 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
 	function add_scripts() { // добавление скриптов
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_deregister_script('jquery'); // выключаем стандартный jquery
-	    wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true); // добавляем свой
-	    wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js','','',true); // бутстрап
+	    wp_enqueue_script('jquery','//code.jquery.com/jquery-3.2.1.slim.min.js','','',true); // добавляем свой
+	    wp_enqueue_script('popper','//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js','','',true); // popper
+	    wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap/bootstrap.min.js','','',true); // бутстрап
+	    wp_enqueue_script('jq-no-conflict', get_template_directory_uri().'/js/jq-no-conflict.js','','',true); // jq-no-confilct
+	    wp_enqueue_script('of-canvas', get_template_directory_uri().'/addons/Off-Canvas-Menu-Bootstrap-4/dist/js/slidebars.min.js','','',true); // off-canvas
+	    wp_enqueue_script('of-canvas-component', get_template_directory_uri().'/addons/Off-Canvas-Menu-Bootstrap-4/dist/js/component-slidebars.min.js','','',true); // off-canvas-component
+	    wp_enqueue_script('formstyle', get_template_directory_uri().'/addons/jQueryFormStyler/jquery.formstyler.min.js','','',true); // formstyle
+	    wp_enqueue_script('owl', get_template_directory_uri().'/addons/OwlCarousel/dist/owl.carousel.min.js','','',true); // owl
+	    wp_enqueue_script('fancyBox', get_template_directory_uri().'/addons/fancybox/dist/jquery.fancybox.min.js','','',true); // fancybox
+	    wp_enqueue_script('ymap', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat','','',false); // ymap
 	    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	}
 }
@@ -106,8 +114,15 @@ add_action('wp_print_styles', 'add_styles'); // приклеем ф-ю на до
 if (!function_exists('add_styles')) { // если ф-я уже есть в дочерней теме - нам не надо её определять
 	function add_styles() { // добавление стилей
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
-	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.min.css' ); // бутстрап
-		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
+	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap/bootstrap.min.css' ); // бутстрап
+	    wp_enqueue_style( 'formstyle', get_template_directory_uri().'/addons/jQueryFormStyler/jquery.formstyler.css' ); // formstyle
+	    wp_enqueue_style( 'off-canvas', get_template_directory_uri().'/addons/Off-Canvas-Menu-Bootstrap-4/dist/css/component-slidebars.min.css' ); // Off-Canvas
+	    wp_enqueue_style( 'fa', get_template_directory_uri().'/addons/fa/css/all.css' ); // fa
+	    wp_enqueue_style( 'owl', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.carousel.min.css' ); // owl
+	    wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.theme.default.min.css' ); // owl
+	    wp_enqueue_style( 'fancyBox', get_template_directory_uri().'/addons/fancybox/dist/jquery.fancybox.min.css' ); // fancybox
+		wp_enqueue_style( 'main', get_template_directory_uri().'/css/general.css' ); // основные стили шаблона
+		wp_enqueue_style( 'products', get_template_directory_uri().'/css/sidebar-products.css' ); // товары
 	}
 }
 
@@ -156,5 +171,104 @@ if (!function_exists('content_class_by_sidebar')) { // если ф-я уже е�
 		}
 	}
 }
+
+/**
+ * Like get_template_part() put lets you pass args to the template file
+ * Args are available in the template as $template_args array
+ * @param string filepart
+ * @param mixed wp_args style argument list
+ */
+function hm_get_template_part( $file, $template_args = array(), $cache_args = array() ) {
+    $template_args = wp_parse_args( $template_args );
+    $cache_args = wp_parse_args( $cache_args );
+    if ( $cache_args ) {
+        foreach ( $template_args as $key => $value ) {
+            if ( is_scalar( $value ) || is_array( $value ) ) {
+                $cache_args[$key] = $value;
+            } else if ( is_object( $value ) && method_exists( $value, 'get_id' ) ) {
+                $cache_args[$key] = call_user_method( 'get_id', $value );
+            }
+        }
+        if ( ( $cache = wp_cache_get( $file, serialize( $cache_args ) ) ) !== false ) {
+            if ( ! empty( $template_args['return'] ) )
+                return $cache;
+            echo $cache;
+            return;
+        }
+    }
+    $file_handle = $file;
+    do_action( 'start_operation', 'hm_template_part::' . $file_handle );
+    if ( file_exists( get_stylesheet_directory() . '/' . $file . '.php' ) )
+        $file = get_stylesheet_directory() . '/' . $file . '.php';
+    elseif ( file_exists( get_template_directory() . '/' . $file . '.php' ) )
+        $file = get_template_directory() . '/' . $file . '.php';
+    ob_start();
+    $return = require( $file );
+    $data = ob_get_clean();
+    do_action( 'end_operation', 'hm_template_part::' . $file_handle );
+    if ( $cache_args ) {
+        wp_cache_set( $file, $data, serialize( $cache_args ), 3600 );
+    }
+    if ( ! empty( $template_args['return'] ) )
+        if ( $return === false )
+            return false;
+        else
+            return $data;
+    echo $data;
+}
+
+/**
+ * Обновление блока корзины
+ */
+function get_cart_update(){
+    echo '(' . WC()->cart->get_cart_contents_count() . ' на ' . WC()->cart->get_cart_total() . ')';
+    wp_die();
+}
+add_action( 'wp_ajax_get_cart_update', 'get_cart_update' );
+add_action( 'wp_ajax_nopriv_get_cart_update', 'get_cart_update' );
+
+add_action('admin_menu', 'add_gcf_interface');
+
+function add_gcf_interface() {
+    add_options_page('Настройка полей', 'Настройка полей', '8', 'functions', 'editglobalcustomfields');
+}
+
+function editglobalcustomfields() {
+    ?>
+	<div class='wrap'>
+		<h2>Настройки полей</h2>
+		<form method="post" action="options.php">
+            <?php wp_nonce_field('update-options') ?>
+
+			<p>
+				<strong>Телефон:</strong><br/>
+				<input type="text" name="phone" size="45" value="<?php echo get_option('phone'); ?>" />
+			</p>
+
+			<p>
+				<strong>Instagram:</strong><br/>
+				<input type="text" name="instagram" size="45" value="<?php echo get_option('instagram'); ?>" />
+			</p>
+
+			<p>
+				<strong>Карта:</strong><br/>
+				<textarea name="map" cols="50" rows="10"><?php echo get_option('map'); ?></textarea>
+			</p>
+
+			<p>
+				<strong>Трансляция:</strong><br/>
+				<textarea name="live" cols="50" rows="10"><?php echo get_option('live'); ?></textarea>
+			</p>
+
+			<p><input type="submit" name="Submit" value="Сохранить" /></p>
+
+			<input type="hidden" name="action" value="update" />
+			<input type="hidden" name="page_options" value="phone,instagram,map,live" />
+
+		</form>
+	</div>
+    <?php
+}
+
 
 ?>
