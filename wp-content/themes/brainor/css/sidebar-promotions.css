@@ -1,0 +1,287 @@
+.promotions-block {
+
+}
+
+.promotions-block .products-fly {
+    background-image: url('../imgs/pizza.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    overflow: hidden;
+}
+
+.promotions-block .products-fly img {
+    position: absolute;
+    z-index: -1;
+}
+
+.promotions-block .products-fly .container {
+    position: relative;
+}
+
+@keyframes rotate-1 {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+    }
+}
+
+@keyframes rotate-2 {
+    0% {
+        transform: rotate(0deg) scaleX(-1);
+        -ms-transform: rotate(0deg) scaleX(-1);
+        -moz-transform: rotate(0deg) scaleX(-1);
+        -webkit-transform: rotate(0deg) scaleX(-1);
+        -o-transform: rotate(0deg) scaleX(-1);
+    }
+    50% {
+        transform: rotate(20deg) scaleX(-1);
+        -ms-transform: rotate(20deg) scaleX(-1);
+        -moz-transform: rotate(20deg) scaleX(-1);
+        -webkit-transform: rotate(20deg) scaleX(-1);
+        -o-transform: rotate(20deg) scaleX(-1);
+    }
+}
+
+.promotions-block .products-fly img:nth-child(1) {
+    width: 340px;
+    left: -200px;
+    top: 40px;
+    animation: rotate-1 15s ease-in-out infinite alternate;
+}
+
+.promotions-block .products-fly img:nth-child(2) {
+    width: 340px;
+    right: -200px;
+    top: 40px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    animation: rotate-2 15s ease-in-out infinite alternate;
+}
+
+@keyframes up-down-3 {
+    0% {
+        top: 20px
+    }
+    50% {
+        top: 40px
+    }
+}
+
+@keyframes up-down-4 {
+    0% {
+        top: 0px
+    }
+    50% {
+        top: 20px
+    }
+}
+
+@keyframes up-down-5 {
+    0% {
+        top: 90px
+    }
+    50% {
+        top: 100px
+    }
+}
+
+.promotions-block .products-fly img:nth-child(3) {
+    width: 160px;
+    left: 160px;
+    top: 10px;
+    animation: up-down-3 5s ease-in-out infinite alternate;
+}
+
+.promotions-block .products-fly img:nth-child(4) {
+    width: 100px;
+    left: 50px;
+    top: 0px;
+    animation: up-down-4 8s ease-in-out infinite alternate;
+}
+
+.promotions-block .products-fly img:nth-child(5) {
+    width: 100px;
+    right: 200px;
+    top: 90px;
+    animation: up-down-5 10s ease-in-out infinite alternate;
+}
+
+@keyframes up-down-rotate-6 {
+    0% {
+        top: 140px;
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        top: 160px;
+        transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+    }
+}
+
+@keyframes up-down-rotate-7 {
+    0% {
+        top: 0px;
+        transform: rotate(55deg);
+        -ms-transform: rotate(55deg);
+        -moz-transform: rotate(55deg);
+        -webkit-transform: rotate(55deg);
+        -o-transform: rotate(55deg);
+    }
+    50% {
+        top: 50px;
+        transform: rotate(100deg);
+        -ms-transform: rotate(100deg);
+        -moz-transform: rotate(100deg);
+        -webkit-transform: rotate(100deg);
+        -o-transform: rotate(100deg);
+    }
+}
+
+.promotions-block .products-fly img:nth-child(6) {
+    width: 100px;
+    left: 150px;
+    top: 140px;
+    animation: up-down-rotate-6 10s ease-in-out infinite alternate;
+}
+
+.promotions-block .products-fly img:nth-child(7) {
+    width: 100px;
+    right: 100px;
+    top: 0px;
+    transform: rotate(55deg);
+    -ms-transform: rotate(55deg);
+    -moz-transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+    -o-transform: rotate(55deg);
+    animation: up-down-rotate-7 6s ease-in-out infinite alternate;
+}
+
+@keyframes up-down-rotate-8 {
+    0% {
+        top: 100px;
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        top: 110px;
+        transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+    }
+}
+
+.promotions-block .products-fly img:nth-child(8) {
+    width: 160px;
+    right: 130px;
+    top: 100px;
+    animation: up-down-rotate-8 6s ease-in-out infinite alternate;
+}
+
+/* ======================== */
+
+.promotions-block .curved-container {
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.promotions-block .curved-container img.figure {
+    width: auto;
+    display: unset;
+}
+
+.promotions-block .curved-container p.promotion-label {
+    font-family: 'venecia', serif;
+    font-size: 3rem;
+    color: #f8a51f;
+}
+
+.promotions-block .curved-container p.promotion-header {
+    color: #2b2f3e;
+}
+
+.promotions-block .curved-container p.promotion-description {
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+@media(max-width: 991px) {
+    .promotions-block .curved-container {
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .promotions-block .curved-container p.promotion-header {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .promotions-block .products-fly {
+        height: unset;
+        margin-bottom: unset;
+    }
+}
+
+@media(min-width: 992px) {
+    .promotions-block .curved-container {
+        background-image: url('../imgs/curve-bg.png');
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    .promotions-block .curved-container p.promotion-header {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .promotions-block .products-fly {
+        height: 280px;
+        margin-bottom: -60px;
+    }
+}
+
+.promotions-block .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100% !important;
+}
+
+.promotions-block .owl-nav button {
+    position: absolute;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 1px solid #2b2f3e !important;
+}
+
+.promotions-block .owl-nav button.owl-prev {
+    left: -20px;
+}
+
+.promotions-block .owl-nav button.owl-next {
+    right: -20px;
+}

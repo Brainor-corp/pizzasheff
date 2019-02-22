@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'venecia'; /*a name to be used later*/
+    src: url('../fonts/Venecia2.ttf'); /*URL to font*/
+}
+
+body {
+    background: url(../imgs/bg-general.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    overflow-x: hidden !important;
+}
+
+header .header-container {
+    padding-top: 40px;
+}
+
+header .header-container,
+header a,
+header button {
+    color: white;
+}
+
+header a:hover {
+    color: white !important;
+}
+
+header .header-container .header-top .header-middle {
+    text-align: center;
+}
+
+header .header-container .header-top .header-middle button {
+    color: white;
+}
+
+header .header-container .header-top .header-middle button:after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f078";
+    border: 0px !important;
+    font-weight: 900;
+    vertical-align: baseline;
+}
+
+header .header-container .header-top .header-last {
+    text-align: right;
+}
+
+header .header-container .header-bottom button {
+    color: white;
+}
+
+header .header-container .header-bottom button:after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f078";
+    border: 0px !important;
+    font-weight: 900;
+    vertical-align: baseline;
+}
+
+.bg-orange {
+    background-color: #f8a51f !important;
+}
+
+.bg-black-transparent {
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
+button.bg-orange:hover,
+.jq-number__spin:hover,
+a.bg-orange:hover {
+    background-color: #e99b1d !important;
+}
+
+.text-orange {
+    color: #f8a51f !important;
+}
+
+.border-orange {
+    border: 2px solid #f8a51f !important;
+}
+
+.btn-rounded {
+    border-radius: 20px !important;
+}
+
+footer img.logo-orange {
+    max-width: 100px;
+}
+
+.canvas-menu {
+    z-index: 999;
+}
+
+header ul.list-inline li {
+    display: inline-block;
+}
+
+footer a {
+    color: #f8a51f !important;
+}
+
+*:focus {
+    outline:none !important;
+    box-shadow: none !important;
+}
+
+.preload {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+}
+
+#deliveryModal .deliveryModalHeader {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#deliveryModal p {
+    font-size: 1.1rem;
+}
+
+.product-img .zoom-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 10px;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear,opacity 0.3s linear;
+}
+
+.product-img:hover .zoom-icon {
+    visibility: visible;
+    opacity:1 ;
+}
+
+.product-img .zoom-icon a {
+    position: absolute;
+    top: .4em;
+    right: .6em;
+    color: black !important;
+}
+
+.variations select {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
