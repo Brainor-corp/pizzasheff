@@ -104,6 +104,7 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
 	    wp_enqueue_script('of-canvas-component', get_template_directory_uri().'/addons/Off-Canvas-Menu-Bootstrap-4/dist/js/component-slidebars.min.js','','',true); // off-canvas-component
 	    wp_enqueue_script('formstyle', get_template_directory_uri().'/addons/jQueryFormStyler/jquery.formstyler.min.js','','',true); // formstyle
 	    wp_enqueue_script('owl', get_template_directory_uri().'/addons/OwlCarousel/dist/owl.carousel.min.js','','',true); // owl
+	    wp_enqueue_script('fancyBox', get_template_directory_uri().'/addons/fancybox/dist/jquery.fancybox.min.js','','',true); // fancybox
 	    wp_enqueue_script('ymap', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&coordorder=longlat','','',false); // ymap
 	    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	}
@@ -119,6 +120,7 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	    wp_enqueue_style( 'fa', get_template_directory_uri().'/addons/fa/css/all.css' ); // fa
 	    wp_enqueue_style( 'owl', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.carousel.min.css' ); // owl
 	    wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/addons/OwlCarousel/dist/assets/owl.theme.default.min.css' ); // owl
+	    wp_enqueue_style( 'fancyBox', get_template_directory_uri().'/addons/fancybox/dist/jquery.fancybox.min.css' ); // fancybox
 		wp_enqueue_style( 'main', get_template_directory_uri().'/css/general.css' ); // основные стили шаблона
 		wp_enqueue_style( 'products', get_template_directory_uri().'/css/sidebar-products.css' ); // товары
 	}

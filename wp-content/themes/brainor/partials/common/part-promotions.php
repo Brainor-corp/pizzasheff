@@ -68,7 +68,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-12 d-md-block d-none">
-                                <img class="img-fluid" src="<?php the_post_thumbnail_url('large') ?>" alt="">
+                                <a href="<?php the_permalink() ?>">
+                                    <img class="img-fluid" src="<?php the_post_thumbnail_url('large') ?>" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>

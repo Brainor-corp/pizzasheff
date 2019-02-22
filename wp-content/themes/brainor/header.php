@@ -136,6 +136,13 @@ function my_classes_names( $classes ) {
                     </div>
                 </div>
             </div>
+            <div class="row d-md-none d-block mt-4">
+                <div class="col-12 text-center">
+                    <a href="/">
+                        <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid w-50">
+                    </a>
+                </div>
+            </div>
             <div class="row header-bottom pt-5">
                 <div class="col-12 text-center">
                     <div class="btn-group">

@@ -18,7 +18,13 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12">
-                            <div class="product-img" style="background-image: url('<?php echo get_the_post_thumbnail_url($product->get_id(), 'large'); ?>')"></div>
+                            <div class="product-img text-right" style="background-image: url('<?php echo get_the_post_thumbnail_url($product->get_id(), 'large'); ?>')">
+                                <div class="d-inline-block bg-white zoom-icon text-center">
+                                    <a data-fancybox="gallery" href="<?php echo get_the_post_thumbnail_url($product->get_id(), 'full'); ?>">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-12">
                             <div class="px-2">
