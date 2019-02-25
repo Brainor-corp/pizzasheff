@@ -2457,7 +2457,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 			'id'                => $key,
 			'class'             => array(),
 			'label_class'       => array(),
-			'input_class'       => array(),
+			'input_class'       => array('form-control'),
 			'return'            => false,
 			'options'           => array(),
 			'custom_attributes' => array(),
