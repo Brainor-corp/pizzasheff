@@ -9,6 +9,11 @@ jQuery(document).ready(function($) {
         navText : ['<i class="fas fa-arrow-left"></i>','<i class="fas fa-arrow-right"></i>']
     });
 
+    $( document.body ).on( 'updated_cart_totals', function(){
+        updateCart();
+        $( ".product-count" ).styler();
+    });
+
     $( ".product-count" ).styler();
 
     $(document).on('change', "input[name='attribute_pa_size']", function () {
