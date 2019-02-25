@@ -163,3 +163,12 @@ footer a {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.required{
+    color: #b5110e;
+}
+.woocommerce button {
+    background-color: #f8a51f !important;
+}
+.page .bg-white{
+    margin-bottom: 15px;
+}

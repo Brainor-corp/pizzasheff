@@ -1,0 +1,443 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Coupons for WooCommerce\n"
+"POT-Creation-Date: 2019-01-30 15:10+0530\n"
+"PO-Revision-Date: 2019-01-30 15:28+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wt-smart-coupon.php\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/class-wt-duplicate-coupon.php:20
+msgid "No post to duplicate has been supplied!"
+msgstr "Aucun article à dupliquer n'a été fourni!"
+
+#: admin/class-wt-duplicate-coupon.php:102
+msgid "Post creation failed, could not find original post: "
+msgstr ""
+"La création de publication a échoué, impossible de trouver la publication "
+"d'origine: "
+
+#: admin/class-wt-duplicate-coupon.php:114
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+#: admin/class-wt-duplicate-coupon.php:115
+msgid "Duplicate this item"
+msgstr "Dupliquer cet article"
+
+#: admin/class-wt-smart-coupon-admin.php:165
+msgid "Checkout Options"
+msgstr "Options commande"
+
+#: admin/class-wt-smart-coupon-admin.php:171
+msgid "Give away Products"
+msgstr "Donner des produits"
+
+#: admin/class-wt-smart-coupon-admin.php:216
+msgid "Shipping methods"
+msgstr "Méthodes d'expédition"
+
+#: admin/class-wt-smart-coupon-admin.php:217
+msgid "Any shipping method"
+msgstr "Toute méthode d'expédition"
+
+#: admin/class-wt-smart-coupon-admin.php:234
+msgid ""
+"Coupon will be applicable if any of these shipping methods are selected."
+msgstr ""
+"Le coupon sera applicable si l’une de ces méthodes d’expédition est "
+"sélectionnée."
+
+#: admin/class-wt-smart-coupon-admin.php:239
+msgid "Payment methods"
+msgstr "Moyens de paiement"
+
+#: admin/class-wt-smart-coupon-admin.php:241
+msgid "Any payment method"
+msgstr "Aucune méthode de paiement"
+
+#: admin/class-wt-smart-coupon-admin.php:266
+msgid "Coupon will be applicable if any of these payment methods are selected."
+msgstr ""
+"Le coupon sera applicable si l’un de ces modes de paiement est sélectionné."
+
+#: admin/class-wt-smart-coupon-admin.php:270
+msgid "Applicable Roles"
+msgstr "Rôles applicables"
+
+#: admin/class-wt-smart-coupon-admin.php:279
+msgid "Any role"
+msgstr "Tout rôle"
+
+#: admin/class-wt-smart-coupon-admin.php:291
+msgid ""
+"Coupon will be applicable if customer belongs to any of these User Roles."
+msgstr ""
+"Le coupon sera applicable si le client appartient à l’un de ces rôles "
+"d’utilisateur."
+
+#: admin/class-wt-smart-coupon-admin.php:306
+msgid "Support"
+msgstr "Soutien"
+
+#: admin/class-wt-smart-coupon-admin.php:307
+msgid "Review"
+msgstr "La revue"
+
+#: admin/class-wt-smart-coupon-admin.php:330
+msgid "Product condition:"
+msgstr "Conditions relatives au produit :"
+
+#: admin/class-wt-smart-coupon-admin.php:333
+#: admin/class-wt-smart-coupon-admin.php:354
+msgid "Any."
+msgstr "toute"
+
+#: admin/class-wt-smart-coupon-admin.php:334
+#: admin/class-wt-smart-coupon-admin.php:355
+msgid "All."
+msgstr "toute"
+
+#: admin/class-wt-smart-coupon-admin.php:336
+msgid ""
+"Coupon will be applied if any of the products from the below is available in "
+"the cart; all of option requires that the cart contains all of the listed "
+"products."
+msgstr ""
+"Le coupon sera appliqué si l'un des produits ci-dessous est disponible dans "
+"le panier. toutes les options nécessitent que le panier contienne tous les "
+"produits énumérés."
+
+#: admin/class-wt-smart-coupon-admin.php:351
+msgid "Category condition:"
+msgstr "Catégorie de condition:"
+
+#: admin/class-wt-smart-coupon-admin.php:358
+msgid ""
+"Coupon will be applied if any of the categories from the below is available "
+"in the cart; all of option requires that the cart contains all of the listed "
+"categories."
+msgstr ""
+"Le coupon sera appliqué si l’une des catégories ci-dessous est disponible "
+"dans le panier; toutes les options nécessite que le panier contienne toutes "
+"les catégories énumérées."
+
+#: admin/class-wt-smart-coupon-admin.php:363
+msgid "Matching products"
+msgstr "Produits correspondants"
+
+#: admin/class-wt-smart-coupon-admin.php:370
+msgid "Minimum quantity of matching products"
+msgstr "Quantité minimale des produits correspondants"
+
+#: admin/class-wt-smart-coupon-admin.php:371
+#: admin/class-wt-smart-coupon-admin.php:395
+msgid "No minimum"
+msgstr "Aucun minimum"
+
+#: admin/class-wt-smart-coupon-admin.php:372
+msgid ""
+"Minimum quantity of the products that match the given product or category "
+"restrictions. If no product or category restrictions are specified, the "
+"total number of products is used."
+msgstr ""
+"Quantité minimale de produits correspondant aux restrictions de produit ou "
+"de catégorie données (voir l'onglet \"Restriction d'utilisation\"). Si "
+"aucune restriction de produit ou de catégorie n'est spécifiée, le nombre "
+"total de produits est utilisé."
+
+#: admin/class-wt-smart-coupon-admin.php:382
+msgid "Maximum quantity of matching products"
+msgstr "Quantité maximale des produits correspondants"
+
+#: admin/class-wt-smart-coupon-admin.php:383
+#: admin/class-wt-smart-coupon-admin.php:407
+msgid "No maximum"
+msgstr "Pas de maximum"
+
+#: admin/class-wt-smart-coupon-admin.php:384
+msgid ""
+"Maximum quantity of the products that match the given product or category "
+"restrictions. If no product or category restrictions are specified, the "
+"total number of products is used."
+msgstr ""
+"Quantité maximale de produits correspondant aux restrictions de produit ou "
+"de catégorie données (voir l'onglet \"Restriction d'utilisation\"). Si "
+"aucune restriction de produit ou de catégorie n'est spécifiée, le nombre "
+"total de produits est utilisé."
+
+#: admin/class-wt-smart-coupon-admin.php:394
+msgid "Minimum subtotal of matching products"
+msgstr "Sous-total minimum des produits correspondants"
+
+#: admin/class-wt-smart-coupon-admin.php:396
+msgid ""
+"Minimum price subtotal of the products that match the given product or "
+"category restrictions."
+msgstr ""
+"Sous-total de prix minimum des produits qui correspondent aux restrictions "
+"de produit ou de catégorie données."
+
+#: admin/class-wt-smart-coupon-admin.php:406
+msgid "Maximum subtotal of matching products"
+msgstr "Le sous-total maximal des produits correspondants"
+
+#: admin/class-wt-smart-coupon-admin.php:408
+msgid ""
+"Maximum price subtotal of the products that match the given product or "
+"category restrictions."
+msgstr ""
+"Sous-total de prix maximum des produits qui correspondent aux restrictions "
+"de produit ou de catégorie données."
+
+#: admin/class-wt-smart-coupon-admin.php:434
+msgid "Please choose a simple product"
+msgstr "Veuillez choisir un produit simple"
+
+#: admin/class-wt-smart-coupon-admin.php:436
+msgid "Free Products"
+msgstr "Produits gratuits"
+
+#: admin/class-wt-smart-coupon-admin.php:437
+msgid "Search for a product&hellip;"
+msgstr "Rechercher un produit&hellip;"
+
+#: admin/class-wt-smart-coupon-admin.php:447
+msgid ""
+"Applicable only for simple product. A single quantity of the product "
+"specified is added to the customer cart when the coupon is applied. However "
+"the corresponding tax and shipping charges are not exempted"
+msgstr ""
+"Applicable uniquement pour un produit simple. Une seule quantité du produit "
+"spécifié est ajoutée au panier du client lorsque le coupon est appliqué. "
+"Cependant, les taxes et frais d'expédition correspondants ne sont pas "
+"exemptés"
+
+#: admin/class-wt-smart-coupon-admin.php:468
+msgid "Show in My account"
+msgstr "Afficher dans mon compte"
+
+#: admin/class-wt-smart-coupon-admin.php:470
+msgid ""
+"Check to make the coupon available for view in the users my account page."
+msgstr ""
+"Cochez pour que le coupon soit disponible pour affichage dans la page de mon "
+"compte des utilisateurs."
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:19
+msgid "Used it successfully. Don't need anymore."
+msgstr "Utilisé avec succès. Je n’en ai plus besoin."
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:21
+msgid "Have used it successfully and aint in need of it anymore"
+msgstr "Je l’ai utilisé avec succès et je n’en ai plus besoin"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:25
+msgid "I couldn't understand how to make it work"
+msgstr "Je n’arrive pas à comprendre comment le faire fonctionner"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:27
+msgid "Would you like us to assist you?"
+msgstr "Souhaitez-vous que nous vous aidions?"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:31
+msgid "I found a better plugin"
+msgstr "Trouvé un meilleur plugin"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:33
+msgid "Which plugin?"
+msgstr "Quel plugin"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:37
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr ""
+"Le plugin est bien, mais j'ai besoin d'une fonctionnalité non supportée"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:39
+msgid "Could you tell us more about that feature?"
+msgstr "Pourriez-vous nous en dire plus sur cette fonctionnalité?"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:43
+msgid "The plugin is not working"
+msgstr "L’extension ne fonctionne pas"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:45
+msgid "Could you tell us a bit more whats not working?"
+msgstr "Pourriez-vous nous dire un peu plus ce qui ne fonctionne pas?"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:49
+msgid "It's not what I was looking for"
+msgstr "Ce n'est pas ce que je cherchais"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:55
+msgid "The plugin didn't work as expected"
+msgstr "Le plugin n'a pas fonctionné comme prévu"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:57
+msgid "What did you expect?"
+msgstr "A quoi vous attendiez-vous ?"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:61
+msgid "Other"
+msgstr "Autre"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:63
+msgid "Could you tell us a bit more?"
+msgstr "Pourriez-vous nous en dire un peu plus?"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:81
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr ""
+"Si vous avez un moment, faites-nous savoir pourquoi vous avez désactivé "
+"l’extension:"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:93
+msgid "I rather wouldn't say"
+msgstr "Je préfère ne pas le dire"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:94
+msgid "Submit & Deactivate"
+msgstr "Soumettre et désactiver"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:95
+msgid "Cancel"
+msgstr "Annuler"
+
+#: includes/class-wt-smartcoupon-uninstall-feedback.php:174
+msgid "Deactivate and leave a review"
+msgstr "Désactiver et laisser un commentaire"
+
+#: public/class-myaccount-smart-coupon.php:42
+#: public/class-myaccount-smart-coupon.php:55
+msgid "My Coupons"
+msgstr "Mes Coupons"
+
+#: public/class-wt-smart-coupon-public.php:130
+msgid "Sorry, this coupon is not applicable to selected shipping method"
+msgstr ""
+"Désolé, ce coupon ne s'applique pas à la méthode d'expédition sélectionnée."
+
+#: public/class-wt-smart-coupon-public.php:144
+msgid "Sorry, this coupon is not applicable to selected Payment method"
+msgstr ""
+"Désolé, ce coupon ne s'applique pas à la méthode de paiement sélectionnée"
+
+#: public/class-wt-smart-coupon-public.php:159
+msgid "Sorry, this coupon is not applicable for your Role"
+msgstr "Désolé, ce coupon ne s'applique pas à votre rôle."
+
+#: public/class-wt-smart-coupon-public.php:184
+#: public/class-wt-smart-coupon-public.php:211
+msgid "Sorry, this coupon is not applicable to selected products."
+msgstr "Désolé, ce code client n'est pas applicable aux produits sélectionnés."
+
+#: public/class-wt-smart-coupon-public.php:226
+#, php-format
+msgid "The minimum quantity of matching products for this coupon is %s."
+msgstr "La quantité minimale de produits pour ce coupon est de %s."
+
+#: public/class-wt-smart-coupon-public.php:233
+#, php-format
+msgid "The maximum quantity of matching products for this coupon is %s."
+msgstr "La quantité maximale de produits pour ce coupon est de %s."
+
+#: public/class-wt-smart-coupon-public.php:247
+#, php-format
+msgid "The minimum subtotal of matching products for this coupon is %s."
+msgstr ""
+"Le sous-total minimum des produits correspondants pour ce coupon est %s"
+
+#: public/class-wt-smart-coupon-public.php:254
+#, php-format
+msgid "The maximum subtotal of matching products for this coupon is %s."
+msgstr "Le sous-total maximum de produits correspondants pour ce coupon %s"
+
+#: public/class-wt-smart-coupon-public.php:483
+msgid "It's a free gift for you"
+msgstr "C'est un cadeau gratuit pour vous"
+
+#: public/class-wt-smart-coupon-public.php:604
+msgid "Free Gift Item"
+msgstr "Article cadeau gratuit"
+
+#: public/class-wt-smart-coupon-public.php:625
+msgid "free_product"
+msgstr "free_product"
+
+#: public/class-wt-smart-coupon-public.php:657
+msgid "Free Product:"
+msgstr "Produit gratuit"
+
+#: public/class-wt-smart-coupon-public.php:696
+#: public/class-wt-smart-coupon-public.php:711
+msgid "Cart Discount"
+msgstr "Remise panier pour renouvellement"
+
+#: public/class-wt-smart-coupon-public.php:701
+#: public/class-wt-smart-coupon-public.php:706
+msgid "Product Discount"
+msgstr "Remise produit pour renouvellement"
+
+#: public/class-wt-smart-coupon-public.php:739
+msgid "Expires Today "
+msgstr "Expire aujourd'hui "
+
+#: public/class-wt-smart-coupon-public.php:741
+msgid "Expires in "
+msgstr "Expire dans "
+
+#: public/class-wt-smart-coupon-public.php:741
+msgid " days"
+msgstr "jours"
+
+#: public/class-wt-smart-coupon-public.php:743
+msgid "Expires on "
+msgstr "Expire le "
+
+#: public/partials/my-account/my-account-coupon-view.php:96
+msgid "Sorry you don't have any available coupons"
+msgstr "Désolé, vous n'avez pas de coupons disponibles"
+
+#: public/partials/my-account/my-account-coupon-view.php:111
+msgid "Used / Expired Coupons"
+msgstr "Coupons utilisés / expirés"
+
+#: public/partials/my-account/my-account-coupon-view.php:151
+msgid "Expired"
+msgstr ""
+"La clé de produit pour %s est expirée. Vous pouvez réactiver votre licence à "
+"partir de votre compte : <a href=\"%s\" target=\"_blank\">dashboard</a>."
+
+#: public/partials/my-account/my-account-coupon-view.php:159
+msgid "Sorry no coupon to display"
+msgstr "Désolé, aucun coupon à afficher"
+
+#. Plugin Name of the plugin/theme
+msgid "Smart Coupons for WooCommerce"
+msgstr "Coupons intelligents pour WooCommerce"
+
+#. Description of the plugin/theme
+msgid "Add more options to coupon which gives such wonderful results."
+msgstr ""
+"Ajoutez plus d’options au coupon qui donne des résultats aussi merveilleux."
+
+#. Author of the plugin/theme
+msgid "WebToffee"
+msgstr "WebToffee"
+
+#. Author URI of the plugin/theme
+msgid "https://www.webtoffee.com/"
+msgstr "https://www.webtoffee.com/"
