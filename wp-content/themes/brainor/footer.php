@@ -56,7 +56,7 @@
                 </div>
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-auto col-12 text-md-left text-center">
-                        <span class="text-orange">© <?php echo date("Y"); ?> - PizzaShef</span>
+                        <span class="text-orange">© <?php echo date("Y"); ?> - ПиццаШефф</span>
                     </div>
                     <div class="col-md-auto col-12 my-md-0 my-2 text-md-left text-center">
                         <img src="/wp-content/themes/brainor/imgs/logo-orange.png" class="img-fluid logo-orange" alt="">

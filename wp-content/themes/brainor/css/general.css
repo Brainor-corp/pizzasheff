@@ -166,9 +166,28 @@ footer a {
 .required{
     color: #b5110e;
 }
+
 .woocommerce button {
     background-color: #f8a51f !important;
+    color: white !important;
 }
+
 .page .bg-white{
     margin-bottom: 15px;
+}
+
+.parsley-required, .parsley-custom-error-message {
+    color: white !important;
+    background-color: rgba(255,0,0,0.2);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a {
+    color: black !important;
+}
+
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    background: #f8a51f;
+    color: white;
 }

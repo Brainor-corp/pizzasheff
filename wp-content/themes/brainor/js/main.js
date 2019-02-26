@@ -33,12 +33,12 @@ jQuery(document).ready(function($) {
             dataType: 'html',
             success: function(data){
                 $('span.cart-info').html(data);
-                $('.preload').hide();
+                $('.preload').fadeOut();
             },
             error: function (data) {
                 console.log('error');
                 console.log(data);
-                $('.preload').hide();
+                $('.preload').fadeOut();
             }
         });
     }
@@ -58,8 +58,9 @@ jQuery(document).ready(function($) {
             success: function(response, textStatus, jqXHR){
                 updateCart();
             },
-            error: function (error) {
-                console.log(error);
+            error: function (data) {
+                console.log('error');
+                console.log(data);
                 $('.preload').fadeOut();
             }
         });

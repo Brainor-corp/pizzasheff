@@ -29,7 +29,7 @@ if ( $related_products ) : ?>
 
             <?php woocommerce_product_loop_start(); ?>
 
-            <?php foreach ( $related_products as $related_product ) : ?>
+            <?php foreach ( array_slice($related_products, 0, 3) as $related_product ) : ?>
 
                 <?php
                 $post_object = get_post( $related_product->get_id() );
