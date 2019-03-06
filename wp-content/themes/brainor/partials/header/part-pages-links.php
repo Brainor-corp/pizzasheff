@@ -7,6 +7,6 @@
  */
 ?>
 
-<li class="mr-0 ml-3"><a href="/о-нас/">О нас</a></li>
-<li class="mr-0 ml-3"><a href="/category/promotions/">Акции</a></li>
+<li class="mr-0 ml-3"><a href="/o-nas//">О нас</a></li>
+<li class="mr-0 ml-3"><a href="/pizza/po-aktsii/">Акции</a></li>
 <li class="mr-0 ml-3"><a href="#">Контакты</a></li>

@@ -35,16 +35,23 @@
                         <h5 class="footer-label mb-5">
                             Продукты
                         </h5>
-                        <ul class="pl-0 list-unstyled">
-                            <?php get_template_part('partials/header/part', 'products-categories') ?>
-                        </ul>
+                        <?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
+                            'theme_location' => 'bottom', // идентификатор меню, определен в register_nav_menus() в functions.php
+                            'container' => false, // обертка списка, тут не нужна
+                            'menu_id' => 'bottom-nav-ul', // id для ul
+                            'items_wrap' => '<ul id="%1$s" class="menu %2$s">%3$s</ul>',
+                            'menu_class' => 'nav_bottom', // класс для ul, первые 2 обязательны
+                            'walker'          => '',
+                        );
+                        wp_nav_menu($args); // выводим верхнее меню
+                        ?>
                     </div>
                     <div class="col-md-6 col-12 text-md-left text-center">
                         <h5 class="footer-label mb-5">
                             Зона охвата
                         </h5>
                         <div>
-                            <?php echo get_option('map'); ?>
+                            <?php //echo get_option('map'); ?>
                         </div>
                     </div>
                 </div>

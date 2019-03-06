@@ -2,9 +2,14 @@
     font-family: 'venecia'; /*a name to be used later*/
     src: url('../fonts/Venecia2.ttf'); /*URL to font*/
 }
-
+.margin-center{
+    margin: 0 auto;
+}
+.firm-color{
+    color: #f8a51f!important;
+}
 body {
-    background: url(../imgs/bg-general.jpg);
+    background: url(../imgs/bg-white.jpg);
     background-repeat: repeat-y;
     background-size: 100% auto;
     overflow-x: hidden !important;
@@ -17,21 +22,54 @@ header .header-container {
 header .header-container,
 header a,
 header button {
-    color: white;
+    color: #000000;
 }
 
 header a:hover {
-    color: white !important;
+    color: #000000 !important;
+}
+header .menu-header-product-menu-container, header .menu{
+    margin-bottom: 15px;
+}
+header .menu, header .menu ul{
+    list-style: none;
+    padding-left: 0;
+}
+header .menu li{
+    margin-right: 10px;
+    float: left;
+}
+header .menu a{
+    font-weight: 600;
+}
+.big-text{
+    font-size: 1.5rem;
+}
+header .header-container .header-top .header-first {
+    text-align: center;
 }
 
 header .header-container .header-top .header-middle {
-    text-align: center;
+    text-align: left;
 }
 
 header .header-container .header-top .header-middle button {
     color: white;
 }
-
+.logo-img{
+    max-width: 100px!important;
+}
+.text-white{
+    color: #000000!important;
+}
+.no-border{
+    border: none!important;
+    text-decoration: none;
+}
+.no-border:hover{
+    border: none!important;
+    text-decoration: none;
+}
 header .header-container .header-top .header-middle button:after {
     font-family: "Font Awesome 5 Free", serif;
     content: "\f078";
@@ -97,7 +135,16 @@ header ul.list-inline li {
 footer a {
     color: #f8a51f !important;
 }
-
+footer .menu, footer .menu ul{
+    list-style: none;
+    padding-left: 0;
+}
+footer .menu li{
+    margin-bottom: 10px;
+}
+footer .menu a{
+    font-weight: 600;
+}
 *:focus {
     outline:none !important;
     box-shadow: none !important;
@@ -190,4 +237,10 @@ footer a {
 .woocommerce nav.woocommerce-pagination ul li span.current {
     background: #f8a51f;
     color: white;
+}
+
+.bg-white .product-block .to-cart-form {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(224,224,224,1);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(224,224,224,1);
+    box-shadow: 0px 0px 10px 5px rgba(224,224,224,1);
 }

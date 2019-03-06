@@ -65,7 +65,7 @@ function my_classes_names( $classes ) {
             </div>
             <div class="fixed-bottom text-center p-3">
                 <a href="/">
-                    <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
+                    <img src="/wp-content/themes/brainor/imgs/logo-black.png" alt="" class="img-fluid">
                 </a>
             </div>
         </div>
@@ -74,6 +74,15 @@ function my_classes_names( $classes ) {
         <!--    Настольное меню начало    -->
         <div class="container header-container">
             <div class="row justify-content-between mt-md-0 mt-3 header-top">
+                <div class="col-md header-middle d-md-block d-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="/">
+                                <img src="/wp-content/themes/brainor/imgs/logo-black.png" alt="" class="img-fluid logo-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md col-auto header-first">
                     <div class="row mb-3 d-md-block d-none">
                         <div class="col">
@@ -82,30 +91,26 @@ function my_classes_names( $classes ) {
                             </a>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row align-items-center big-text">
+                        <div class="col-auto pr-md-0 margin-center">
+
+                            <a class="no-border" href="tel:<?php echo get_option('phone'); ?>"><?php echo get_option('phone'); ?></a>
+
+                            <a class="no-border" href="<?php echo get_option('instagram'); ?>">
+                                <img class="img-fluid" src="/wp-content/themes/brainor/imgs/inst-black.png" alt="">
+                            </a>
+
+                            <a class="no-border" href="#" data-toggle="modal" data-target="#liveModal">
+                                <img class="img-fluid" src="/wp-content/themes/brainor/imgs/live-black.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mb-3" style="padding-top: 5px;">
                         <div class="col">
                             Ежедневно с <strong>10:00</strong> до <strong>22:00</strong>
                         </div>
                     </div>
-                    <div class="row align-items-center">
-                        <div class="col-auto pr-md-0">
-                            <a href="<?php echo get_option('instagram'); ?>">
-                                <img class="img-fluid" src="/wp-content/themes/brainor/imgs/inst.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="tel:<?php echo get_option('phone'); ?>"><?php echo get_option('phone'); ?></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md header-middle pt-5 d-md-block d-none">
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="/">
-                                <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-md col-auto header-last">
                     <div class="row d-md-block d-none">
@@ -128,7 +133,7 @@ function my_classes_names( $classes ) {
                                         <span class="cart-info">(<?php echo WC()->cart->get_cart_contents_count() . ' на ' . WC()->cart->get_cart_total() ?>)</span>
                                     </div>
                                     <div class="col-auto pl-md-0">
-                                        <img class="img-fluid" src="/wp-content/themes/brainor/imgs/cart.png" alt="">
+                                        <img class="img-fluid" src="/wp-content/themes/brainor/imgs/cart-black.png" alt="">
                                     </div>
                                 </div>
                             </a>
@@ -139,16 +144,23 @@ function my_classes_names( $classes ) {
             <div class="row d-md-none d-block mt-4">
                 <div class="col-12 text-center">
                     <a href="/">
-                        <img src="/wp-content/themes/brainor/imgs/logo.png" alt="" class="img-fluid w-50">
+                        <img src="/wp-content/themes/brainor/imgs/logo-black.png" alt="" class="img-fluid w-50">
                     </a>
                 </div>
             </div>
             <div class="row header-bottom pt-5">
                 <div class="col-12 text-center">
                     <div class="btn-group">
-                        <ul class="list-inline mb-0">
-                            <?php get_template_part('partials/header/part', 'products-categories') ?>
-                        </ul>
+                        <?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
+                            'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в functions.php
+                            'container' => false, // обертка списка, тут не нужна
+                            'menu_id' => 'top-nav-ul', // id для ul
+                            'items_wrap' => '<ul id="%1$s" class="menu %2$s">%3$s</ul>',
+                            'menu_class' => 'nav_top', // класс для ul, первые 2 обязательны
+                            'walker'          => '',
+                        );
+                        wp_nav_menu($args); // выводим верхнее меню
+                        ?>
                     </div>
                 </div>
             </div>

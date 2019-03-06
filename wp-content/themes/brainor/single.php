@@ -39,7 +39,7 @@ get_header(); // подключаем header.php ?>
                         <?php endif; ?>
                         <div class="col">
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
-                                <h1 class="text-orange"><?php the_title(); // заголовок поста ?></h1>
+                                <h1><?php the_title(); // заголовок поста ?></h1>
                                 <?php the_content(); // контент ?>
                             </article>
                         </div>

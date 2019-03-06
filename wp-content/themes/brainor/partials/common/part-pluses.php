@@ -16,7 +16,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h3>Блок с какими-нибудь плюсами заведения</h3>
+                <h3>Наши преимущества</h3>
             </div>
         </div>
         <div class="row justify-content-around align-items-center mb-5">
@@ -26,27 +26,27 @@
                 </div>
                 <div class="text-center">
                     <span>
-                        Самая вкусная еда на свете
+                        Максимальное количество начинки
                     </span>
                 </div>
             </div>
             <div class="col-auto mb-md-0 mb-4">
                 <div class="text-center mb-4">
-                    <img src="/wp-content/themes/brainor/imgs/items.png" class="img-fluid" alt="">
+                    <img src="/wp-content/themes/brainor/imgs/pizza-icon.png" class="img-fluid" alt="">
                 </div>
                 <div class="text-center">
                     <span>
-                        Дружелюбный сервис
+                        Отборные продукты
                     </span>
                 </div>
             </div>
             <div class="col-auto">
                 <div class="text-center mb-4">
-                    <img src="/wp-content/themes/brainor/imgs/juice.png" class="img-fluid" alt="">
+                    <img src="/wp-content/themes/brainor/imgs/pizza-icon.png" class="img-fluid" alt="">
                 </div>
                 <div class="text-center">
                     <span>
-                        Самое лучшее пиво в городе
+                        Каждая пицца уникальна
                     </span>
                 </div>
             </div>

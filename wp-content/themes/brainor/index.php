@@ -8,7 +8,8 @@ get_header(); // подключаем header.php ?>
 
 <!-- Блок с акциями -->
 <section>
-    <?php get_template_part('partials/common/part', 'promotions') ?>
+<!--    --><?php //get_template_part('partials/common/part', 'promotions') ?>
+    <?php echo do_shortcode('[rev_slider alias="main-page-slider"]');?>
 </section>
 
 <!-- Блок с товарами -->

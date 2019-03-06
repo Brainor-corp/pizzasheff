@@ -22,6 +22,8 @@ $product_categories = get_terms( 'product_cat', $cat_args );
 <?php foreach ($product_categories as $key => $category): ?>
     <?php if($category->name === 'Uncategorized'): continue; endif ?>
     <li class="list-item mr-2 mb-2">
-        <a href="<?php echo get_term_link($category) ?>"><?php echo $category->name ?></a>
+        <a href="<?php echo get_term_link($category) ?>"><stong style="font-weight: 600"><?php echo $category->name ?></stong></a>
     </li>
 <?php endforeach ?>
+
+<?php //echo do_shortcode('[menu menu="header-product-menu"]'); ?>
